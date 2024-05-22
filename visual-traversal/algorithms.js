@@ -62,7 +62,6 @@ async function traverseGraph(){
     if(await dfs(0, 0)){
         while(path.length > 0){
             await sleep(100);
-            console.log(path)
             let [i, j] = path.pop();
             setColor(i, j, "green");
         }
