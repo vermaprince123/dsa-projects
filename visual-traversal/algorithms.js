@@ -1,8 +1,8 @@
-let isVisited = new Array(16).fill(0);
-
+const numbersOfCell = 20;
+let isVisited = new Array(numbersOfCell).fill(0);
 let path = [];
 
-const sleep = (time) => {
+function sleep(time){
     return new Promise(resolve => {
         setTimeout(resolve, time)
     })
@@ -11,12 +11,12 @@ const sleep = (time) => {
 
 
 async function dfs(i, j){
-    if(i<0 || j<0 || i>=16 || j>= 16 || mazePlan[i][j] == 0){
+    if(i<0 || j<0 || i>=numbersOfCell || j>= numbersOfCell || mazePlan[i][j] == 0){
         return false;
     }
 
-    if(i == 15 && j == 15){
-        path.push([15, 15]);
+    if(i == (numbersOfCell-1) && j == (numbersOfCell-1)){
+        path.push([numbersOfCell-1, numbersOfCell-1]);
         return true;
     }
 
@@ -27,28 +27,24 @@ async function dfs(i, j){
 
     //up
     if(await dfs(i-1, j)){
-        // setColor(i, j, "green");
         path.push([i,j]);
         return true;
     }
 
     //down
     if(await dfs(i+1, j)){
-        // setColor(i, j, "green");
         path.push([i,j]);
         return true;
     }
 
     //left
     if(await dfs(i, j-1)){
-        // setColor(i, j, "green");
         path.push([i,j]);
         return true;
     }
 
     //right
     if(await dfs(i, j+1)){
-        // setColor(i, j, "green");
         path.push([i,j]);
         return true;
     }
