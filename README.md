@@ -62,6 +62,45 @@ This project visualizes five different sorting algorithms: Bubble Sort, Insertio
 - **Visualization Speed:** Adjust the speed of the visualization by modifying time in 'await sleep()' function called in scripts.js file. (Current value is 250)
 - **Styles:** Customize the appearance of the bars and layout by editing the `styles.css` file.
 
+### 2. Visual Traversal Algorithms
+
+This project visualizes Depth-First Search (DFS) and Breadth-First Search (BFS) algorithms in a maze-solving scenario. The maze has a starting point at the top-left corner (0,0) and an ending point at the bottom-right corner (n-1, n-1). The maze includes empty cells and blocked cells (marked in black). The algorithms find a path from start to end, visually illustrating the traversal process.
+
+#### Features
+
+- **Maze Representation:** Uses a grid to represent the maze, with different colors for start, end, empty, and blocked cells.
+- **DFS and BFS Visualization:** Visualizes the pathfinding process of DFS and BFS algorithms.
+- **User Interaction:** Start the visualization through a button click.
+
+
+##### Installation
+
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/yourusername/dsa-projects.git
+    cd dsa-projects
+    ```
+
+2. Navigate to the Visual Traversal project directory:
+
+    ```sh
+    cd visual-traversal
+    ```
+
+3. Open `index.html` in your web browser:
+
+    ```sh
+    open index.html
+    ```
+
+##### Running the Visualization
+
+1. Open `index.html` in your preferred web browser.
+2. Click the "DFS Traversal" or "BFS Traversal" button to begin the visualization.
+3. Observe the traversal process and pathfinding from start to end.
+4. To visualize again, click on "Reset Values"
+
 ### Future Projects
 
 Additional DSA projects will be added here. Each project will come with detailed documentation on setup, usage, and the concepts it illustrates.
