@@ -1,4 +1,4 @@
-const numbersOfCell = 20;
+const numbersOfCell = 16;
 let isVisited = new Array(numbersOfCell).fill(0);
 let path = [];
 
@@ -9,12 +9,15 @@ function sleep(time){
 }
 
 
-
-async function dfs(i, j){
+const isValid = (i,j,numbersOfCell, mazePlan)=>{
     if(i<0 || j<0 || i>=numbersOfCell || j>= numbersOfCell || mazePlan[i][j] == 0){
         return false;
     }
+    return true;
+}
 
+async function dfs(i, j){
+   
     if(i == (numbersOfCell-1) && j == (numbersOfCell-1)){
         path.push([numbersOfCell-1, numbersOfCell-1]);
         return true;
@@ -26,25 +29,25 @@ async function dfs(i, j){
     setColor(i, j, "blue");
 
     //up
-    if(await dfs(i-1, j)){
+    if(isValid(i-1,j,numbersOfCell,mazePlan) && await dfs(i-1, j)){
         path.push([i,j]);
         return true;
     }
 
     //down
-    if(await dfs(i+1, j)){
+    if(isValid(i+1,j,numbersOfCell,mazePlan) && await dfs(i+1, j)){
         path.push([i,j]);
         return true;
     }
 
     //left
-    if(await dfs(i, j-1)){
+    if(isValid(i,j-1,numbersOfCell,mazePlan) && await dfs(i, j-1)){
         path.push([i,j]);
         return true;
     }
 
     //right
-    if(await dfs(i, j+1)){
+    if(isValid(i,j+1,numbersOfCell,mazePlan) && await dfs(i, j+1)){
         path.push([i,j]);
         return true;
     }
@@ -59,6 +62,7 @@ async function traverseGraph(){
     if(await dfs(0, 0)){
         while(path.length > 0){
             await sleep(100);
+            console.log(path)
             let [i, j] = path.pop();
             setColor(i, j, "green");
         }

@@ -23,16 +23,35 @@ for (let i = 0; i < numbersOfCell; i++) {
 }
 
 
-const mazePlan = new Array(numbersOfCell).fill(0).map(() => new Array(numbersOfCell).fill(0));
+//const mazePlan = new Array(numbersOfCell).fill(0).map(() => new Array(numbersOfCell).fill(0));
+// for (let i = 0; i < numbersOfCell; i++) {
+//     for (let j = 0; j < numbersOfCell; j++) {
+//         mazePlan[i][j] = Math.random() < 0.5 ? 0 : 1;
+//     }
+// }
+// mazePlan[0][0] = 1;
 
 
-for (let i = 0; i < numbersOfCell; i++) {
-    for (let j = 0; j < numbersOfCell; j++) {
-        mazePlan[i][j] = Math.random() < 0.5 ? 0 : 1;
-    }
-}
+//example array
+const mazePlan = [
+    [1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1],
+    [0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1],
+    [0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1],
+    [1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1],
+    [1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1],
+    [1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+    [0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+    [1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1],
+    [1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+];
 
-mazePlan[0][0] = 1;
 
 for (let i = 0; i < numbersOfCell; i++) {
     for (let j = 0; j < numbersOfCell; j++) {
@@ -42,7 +61,6 @@ for (let i = 0; i < numbersOfCell; i++) {
         }
     }
 }
-
 
 const startCell = document.getElementById(`cell-0-0`);
 startCell.style.backgroundColor = "purple";
