@@ -16,7 +16,7 @@ for (let i = 0; i < numbersOfCell; i++) {
             grid-column-end: ${j + 2};
             grid-row-start: ${i + 1};
             grid-row-end: ${i + 2};
-            border: red solid 1px;
+            border: brown solid 1px;
         `;
         maze.appendChild(cell);
     }
@@ -74,7 +74,9 @@ function setColor(i, j, color){
 }
 
 
-document.getElementById("startBtn").addEventListener('click', () => traverseGraph());
+document.getElementById("dfsBtn").addEventListener('click', () => traverseDfs());
+document.getElementById("bfsBtn").addEventListener('click', () => traverseBfs());
+document.getElementById("resetBtn").addEventListener('click', () => window.location.reload());
 
 
 

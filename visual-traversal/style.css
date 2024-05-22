@@ -4,6 +4,7 @@ body{
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -18,6 +19,37 @@ body{
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    border: red solid 1px;
+    border: black solid 1px;
+}
+
+.buttons{
+    margin-top: 20px;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons button{
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cadetblue;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 600;
+    border: 0;
+}
+.buttons button{
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cadetblue;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 600;
+    border: 0;
+}
+
+.buttons button:hover{
+    color: cadetblue;
+    background-color: aliceblue;
 }
 
