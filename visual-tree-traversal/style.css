@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.node{
+    background-color: green;
+    border: solid blue 2px;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 25px;
+    margin: 10px;
+}
