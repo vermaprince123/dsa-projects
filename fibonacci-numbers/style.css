@@ -1,0 +1,48 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#fibbars{
+    width: 80%;
+    height: 80%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid black 5px;
+    padding: 10px;
+}
+
+#startBtn{
+    border: 0px;
+    border-radius: 2px;
+    width: 500px;
+    height: 75px;
+    background-color: bisque;
+    color: brown;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#startBtn:hover{
+    background-color: brown;
+    color: bisque;
+    cursor: pointer;
+}
+
+.bar{
+    background-color: lightblue;
+    border: solid 1px blue;
+    width: 5.7%;
+    margin-left: 5px;
+}
