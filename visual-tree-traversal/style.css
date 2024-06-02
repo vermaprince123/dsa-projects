@@ -1,14 +1,109 @@
-body{
+.tree{
+    margin-top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .node{
-    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    position: relative;
+}
+
+.node:not(.node-root) .node-element::before{
+    content: '';
+    height: 20px;
+    width: 1px;
+    background-color: lightgray;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -19px ;
+    margin: auto;
+}
+
+.null-node{
+    min-width: 80px;
+}
+
+.node-element{
+    height:60px;
+    background-color: lightyellow;
+    border: solid brown 1px;
+    border-radius: 20px;
+    min-width: 80px;
+    max-width: max-content;
+    padding: 4px 8px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
+    color: brown;
+}
+
+.bottom-line{
+    height: 20px;
+    width: 1px;
+    background-color: lightgray;
+}
+
+
+.node-children{
+    display: flex;
+    padding: 16px;
+    border-top: 1px solid lightgray;
+    max-width: max-content;
+}
+
+.traversal-array{
+    width: max-content;
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(14, auto [col-start]);
     border: solid blue 2px;
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 25px;
-    margin: 10px;
+}
+
+.traversal-array div{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.traversal-btn-array-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.traversal-btn{
+    width: 200px;
+    height: 80px;
+    border: solid 1px blueviolet;
+    background-color: aliceblue;
+    color: blueviolet;
+    font-weight: 600;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.traversal-btn:hover{
+    cursor: pointer;
+    background-color: blueviolet;
+    color: aliceblue;
 }
